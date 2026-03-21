@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import UserProfileViewSet, WorkoutSessionViewSet, WorkoutMetricViewSet
-from . import auth_views  # Import the auth views
+from . import auth_views  
 
 router = DefaultRouter()
 router.register(r'profiles', UserProfileViewSet, basename='userprofile')
