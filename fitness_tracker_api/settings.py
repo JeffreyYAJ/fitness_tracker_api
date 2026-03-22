@@ -26,10 +26,20 @@ SECRET_KEY = 'django-insecure-uuwviuhw7z**$mw*g4idta4xhc+_5usmvzfedds)*^nr_jk&v5
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    http://localhost:5173,
-    http://localhost:5174,
+    "localhost",
+    "127.0.0.1",
+    
 ]
 
+# CORS settings
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://localhost:5173",
+    "http://localhost:5174",
+]
+CORS_ALLOW_CREDENTIALS = True
+CORS_HEADER_ALLOW_ALL = True
 
 # Application definition
 
@@ -44,6 +54,7 @@ INSTALLED_APPS = [
     'api', 
     'rest_framework', 
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
